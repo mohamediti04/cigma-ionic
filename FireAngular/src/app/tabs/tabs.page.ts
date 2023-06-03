@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-tabs',
@@ -9,6 +7,6 @@ import { Observable } from 'rxjs';
 })
 export class TabsPage {
 
-  constructor(public firestore: AngularFirestoreModule) {}
+  constructor() {}
 
 }

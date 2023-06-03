@@ -12,6 +12,11 @@
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
+<ion-item  *ngFor="let item of Items | async">
+    <ion-label>
+         {{item.text}}
+    </ion-label>
 
+</ion-item>
   <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
