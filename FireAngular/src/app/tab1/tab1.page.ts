@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFirestore, AngularFirestoreCollection  } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
 @Component({
   selector: 'app-tab1',
@@ -7,12 +7,15 @@ import { Observable } from 'rxjs';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-
+  itemsCollection : AngularFirestoreCollection<any>
   items: Observable<any[]> //mode asynchron
 
-  constructor(public firestore: AngularFirestoreModule) {
+  constructor(public firestore: AngularFirestore) {
 
-this.items=this.firestore.collection("Items").valueChanges();
-  }
+
+    this.itemsCollection = this.firestore.collection<any>('Items')
+
+    this.items = this.itemsCollection.valueChanges();
+     }
 
 }

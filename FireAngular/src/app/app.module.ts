@@ -11,29 +11,23 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-@NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule
-  ,AngularFireModule.initializeApp(firebaseConfig), AngularFirestoreModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
-  bootstrap: [AppComponent],
-})
+export const firebaseConfig = {
+
+  apiKey: "AIzaSyA_AxPb38H6PGKZpYB6hIJItogD5i7Bf9g",
+
+  authDomain: "angulrfire-c4798.firebaseapp.com",
+
+  databaseURL: "https://angulrfire-c4798-default-rtdb.firebaseio.com",
+
+  projectId: "angulrfire-c4798",
+
+  storageBucket: "angulrfire-c4798.appspot.com",
+
+  messagingSenderId: "693189337537",
+
+  appId: "1:693189337537:web:033d3038536783767b0f40",
+
+  measurementId: "G-V2LFW8TX4M"
+
+}
 export class AppModule {}
-
-export const firebaseConfig =  {
-
-  apiKey : "*************************",
-
-  authDomain : "************.firebaseapp.com",
-
-  databaseUrl : "https://**************.firebaseio.com",
-
-  projectId:"***********************",
-
-  storageBucket : "******************",
-
-  messagingSenderId : "*******************",
-
-  appId : "*************************"
-
-};
